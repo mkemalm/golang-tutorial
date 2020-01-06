@@ -1,3 +1,6 @@
+/*
+This program finds prime sums of even numbers.
+*/
 package main
 
 import (
@@ -31,6 +34,11 @@ func main() {
 	var prime_part1 []int
 	var prime_part2 []int
 	var count int
+
+	if len(os.Args) == 1 {
+		println("Usage: findprimes NUMBER")
+		os.Exit(1)
+	}
 
 	number_s := os.Args[1]
 	number_i, error := strconv.Atoi(number_s)
